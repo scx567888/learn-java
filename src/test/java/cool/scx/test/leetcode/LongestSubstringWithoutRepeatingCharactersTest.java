@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import static cool.scx.learn.leetcode.LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring;
 
-@Test(enabled = false)//todo
 public class LongestSubstringWithoutRepeatingCharactersTest {
 
     public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
         test3();
     }
 
-    @Test
+    @Test(enabled = false)//todo
     public static void test1() {
         var s = "abcabcbb";
         var correctResults = 3;
@@ -22,7 +21,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
         Assert.assertEquals(correctResults, result);
     }
 
-    @Test
+    @Test(enabled = false)//todo
     public static void test2() {
         var s = "bbbbb";
         var correctResults = 1;
@@ -30,7 +29,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
         Assert.assertEquals(correctResults, result);
     }
 
-    @Test
+    @Test(enabled = false)//todo
     public static void test3() {
         var s = "pwwkew";
         var correctResults = 3;
