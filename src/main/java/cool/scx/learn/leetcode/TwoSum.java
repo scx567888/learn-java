@@ -33,7 +33,7 @@ public class TwoSum {
     /**
      * <p>twoSum.</p>
      *
-     * @param nums an array of {@link int} objects
+     * @param nums   an array of {@link int} objects
      * @param target a int
      * @return an array of {@link int} objects
      */

@@ -35,7 +35,7 @@ public class SingleLinkedListNode<T> {
     /**
      * <p>Constructor for SingleLinkedListNode.</p>
      *
-     * @param val a T object
+     * @param val  a T object
      * @param next a {@link cool.scx.learn.common.SingleLinkedListNode} object
      */
     public SingleLinkedListNode(T val, SingleLinkedListNode<T> next) {
@@ -68,8 +68,8 @@ public class SingleLinkedListNode<T> {
      * 链表转集合
      *
      * @param SingleLinkedListNode 链表
+     * @param <T>                  a T class
      * @return 数组
-     * @param <T> a T class
      */
     public static <T> ArrayList<T> toList(final SingleLinkedListNode<T> SingleLinkedListNode) {
         var list = new ArrayList<T>();
@@ -83,8 +83,8 @@ public class SingleLinkedListNode<T> {
      * 数组转链表
      *
      * @param array 数组
+     * @param <T>   a T class
      * @return 链表
-     * @param <T> a T class
      */
     public static <T> SingleLinkedListNode<T> fromArray(final T[] array) {
         SingleLinkedListNode<T> tempSingleLinkedListNode = null;
@@ -118,8 +118,8 @@ public class SingleLinkedListNode<T> {
      * 递归方式的数组转链表
      *
      * @param array 数组
+     * @param <T>   a T class
      * @return 链表
-     * @param <T> a T class
      */
     public static <T> SingleLinkedListNode<T> fromArray2(final T[] array) {
         return _fromArray2(null, array, array.length - 1);
@@ -131,8 +131,8 @@ public class SingleLinkedListNode<T> {
      * @param next  下一个节点
      * @param array 数组
      * @param index 当前数组的索引
+     * @param <T>   a T class
      * @return 链表
-     * @param <T> a T class
      */
     private static <T> SingleLinkedListNode<T> _fromArray2(SingleLinkedListNode<T> next, T[] array, int index) {
         var tempSingleLinkedListNode = new SingleLinkedListNode<>(array[index], next);
