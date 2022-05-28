@@ -24,9 +24,19 @@ import java.util.HashMap;
  * <p>
  * 输入：nums = [3,3], target = 6
  * 输出：[0,1]
+ *
+ * @author scx567888
+ * @version 1.0.0
  */
 public class TwoSum {
 
+    /**
+     * <p>twoSum.</p>
+     *
+     * @param nums an array of {@link int} objects
+     * @param target a int
+     * @return an array of {@link int} objects
+     */
     public static int[] twoSum(int[] nums, int target) {
         var map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {

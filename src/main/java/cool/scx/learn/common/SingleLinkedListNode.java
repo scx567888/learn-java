@@ -7,6 +7,8 @@ import java.util.Arrays;
  * 单项链表节点
  *
  * @param <T>
+ * @author scx567888
+ * @version 1.0.0
  */
 public class SingleLinkedListNode<T> {
 
@@ -14,14 +16,28 @@ public class SingleLinkedListNode<T> {
 
     public final SingleLinkedListNode<T> next;
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     */
     public SingleLinkedListNode() {
         this(null);
     }
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     *
+     * @param val a T object
+     */
     public SingleLinkedListNode(T val) {
         this(val, null);
     }
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     *
+     * @param val a T object
+     * @param next a {@link cool.scx.learn.common.SingleLinkedListNode} object
+     */
     public SingleLinkedListNode(T val, SingleLinkedListNode<T> next) {
         this.val = val;
         this.next = next;
@@ -53,6 +69,7 @@ public class SingleLinkedListNode<T> {
      *
      * @param SingleLinkedListNode 链表
      * @return 数组
+     * @param <T> a T class
      */
     public static <T> ArrayList<T> toList(final SingleLinkedListNode<T> SingleLinkedListNode) {
         var list = new ArrayList<T>();
@@ -67,6 +84,7 @@ public class SingleLinkedListNode<T> {
      *
      * @param array 数组
      * @return 链表
+     * @param <T> a T class
      */
     public static <T> SingleLinkedListNode<T> fromArray(final T[] array) {
         SingleLinkedListNode<T> tempSingleLinkedListNode = null;
@@ -101,6 +119,7 @@ public class SingleLinkedListNode<T> {
      *
      * @param array 数组
      * @return 链表
+     * @param <T> a T class
      */
     public static <T> SingleLinkedListNode<T> fromArray2(final T[] array) {
         return _fromArray2(null, array, array.length - 1);
@@ -113,6 +132,7 @@ public class SingleLinkedListNode<T> {
      * @param array 数组
      * @param index 当前数组的索引
      * @return 链表
+     * @param <T> a T class
      */
     private static <T> SingleLinkedListNode<T> _fromArray2(SingleLinkedListNode<T> next, T[] array, int index) {
         var tempSingleLinkedListNode = new SingleLinkedListNode<>(array[index], next);

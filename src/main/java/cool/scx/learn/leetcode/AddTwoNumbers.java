@@ -20,9 +20,19 @@ import cool.scx.learn.common.SingleLinkedListNode;
  * <p>
  * 输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
  * 输出：[8,9,9,9,0,0,0,1]
+ *
+ * @author scx567888
+ * @version 1.0.0
  */
 public class AddTwoNumbers {
 
+    /**
+     * <p>addTwoNumbers.</p>
+     *
+     * @param l1 a {@link cool.scx.learn.common.SingleLinkedListNode} object
+     * @param l2 a {@link cool.scx.learn.common.SingleLinkedListNode} object
+     * @return a {@link cool.scx.learn.common.SingleLinkedListNode} object
+     */
     public static SingleLinkedListNode<Integer> addTwoNumbers(SingleLinkedListNode<Integer> l1, SingleLinkedListNode<Integer> l2) {
         return _addTwoNumbers(l1, l2, 0);
     }
