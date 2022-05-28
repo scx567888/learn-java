@@ -1,6 +1,5 @@
 package cool.scx.learn.leetcode;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -28,20 +27,6 @@ import java.util.HashMap;
  */
 public class TwoSum {
 
-    public static void main(String[] args) {
-        var nums = new int[]{2, 7, 11, 15};
-        var target = 9;
-        var correctResults = new int[]{0, 1};
-        var result = twoSum(nums, target);
-        var b = sameContent(correctResults, result);
-        if (b) {
-            System.out.println("结果正确 !!!");
-        } else {
-            System.err.println("结果错误 !!!");
-        }
-
-    }
-
     public static int[] twoSum(int[] nums, int target) {
         var map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {
@@ -53,18 +38,6 @@ public class TwoSum {
             map.put(nowValue, i);
         }
         return new int[]{};
-    }
-
-    public static boolean sameContent(int[] arr1, int[] arr2) {
-        var list1 = new ArrayList<Integer>();
-        var list2 = new ArrayList<Integer>();
-        for (int i : arr1) {
-            list1.add(i);
-        }
-        for (int i : arr2) {
-            list2.add(i);
-        }
-        return list1.size() == list2.size() && list1.containsAll(list2);
     }
 
 }

@@ -41,8 +41,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        var sourceFile =Path.of("C:\\Users\\worker\\Pictures\\Wallpaper\\img (3).png") ;
-        var targetFile =Path.of("xxx.jpeg");
+        var sourceFile = Path.of("C:\\Users\\worker\\Pictures\\Wallpaper\\img (3).png");
+        var targetFile = Path.of("xxx.jpeg");
         var imageByte = progressiveJPEG(Files.readAllBytes(sourceFile));
         Files.write(targetFile, imageByte);
     }
