@@ -1,9 +1,10 @@
 package cool.scx.test.leetcode;
 
-import cool.scx.learn.leetcode.TwoSum;
-import cool.scx.util.ObjectUtils;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static cool.scx.learn.leetcode.TwoSum.twoSum;
+import static cool.scx.util.ObjectUtils.toObjectArray;
+import static org.testng.Assert.assertEqualsNoOrder;
 
 public class TwoSumTest {
 
@@ -18,8 +19,8 @@ public class TwoSumTest {
         var nums = new int[]{2, 7, 11, 15};
         var target = 9;
         var correctResults = new int[]{0, 1};
-        var result = TwoSum.twoSum(nums, target);
-        Assert.assertEqualsNoOrder(ObjectUtils.toObjectArray(correctResults), ObjectUtils.toObjectArray(result), null);
+        var result = twoSum(nums, target);
+        assertEqualsNoOrder(toObjectArray(correctResults), toObjectArray(result), null);
     }
 
     @Test
@@ -27,8 +28,8 @@ public class TwoSumTest {
         var nums = new int[]{3, 2, 4};
         var target = 6;
         var correctResults = new int[]{1, 2};
-        var result = TwoSum.twoSum(nums, target);
-        Assert.assertEqualsNoOrder(ObjectUtils.toObjectArray(correctResults), ObjectUtils.toObjectArray(result), null);
+        var result = twoSum(nums, target);
+        assertEqualsNoOrder(toObjectArray(correctResults), toObjectArray(result), null);
     }
 
     @Test
@@ -36,8 +37,8 @@ public class TwoSumTest {
         var nums = new int[]{3, 3};
         var target = 6;
         var correctResults = new int[]{0, 1};
-        var result = TwoSum.twoSum(nums, target);
-        Assert.assertEqualsNoOrder(ObjectUtils.toObjectArray(correctResults), ObjectUtils.toObjectArray(result), null);
+        var result = twoSum(nums, target);
+        assertEqualsNoOrder(toObjectArray(correctResults), toObjectArray(result), null);
     }
 
 }
