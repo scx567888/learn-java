@@ -7,6 +7,8 @@ import java.util.Arrays;
  * 单项链表节点
  *
  * @param <T>
+ * @author scx567888
+ * @version 1.0.0
  */
 public class SingleLinkedListNode<T> {
 
@@ -14,14 +16,28 @@ public class SingleLinkedListNode<T> {
 
     public final SingleLinkedListNode<T> next;
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     */
     public SingleLinkedListNode() {
         this(null);
     }
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     *
+     * @param val a T object
+     */
     public SingleLinkedListNode(T val) {
         this(val, null);
     }
 
+    /**
+     * <p>Constructor for SingleLinkedListNode.</p>
+     *
+     * @param val  a T object
+     * @param next a {@link cool.scx.learn.common.SingleLinkedListNode} object
+     */
     public SingleLinkedListNode(T val, SingleLinkedListNode<T> next) {
         this.val = val;
         this.next = next;
@@ -52,6 +68,7 @@ public class SingleLinkedListNode<T> {
      * 链表转集合
      *
      * @param SingleLinkedListNode 链表
+     * @param <T>                  a T class
      * @return 数组
      */
     public static <T> ArrayList<T> toList(final SingleLinkedListNode<T> SingleLinkedListNode) {
@@ -66,6 +83,7 @@ public class SingleLinkedListNode<T> {
      * 数组转链表
      *
      * @param array 数组
+     * @param <T>   a T class
      * @return 链表
      */
     public static <T> SingleLinkedListNode<T> fromArray(final T[] array) {
@@ -100,6 +118,7 @@ public class SingleLinkedListNode<T> {
      * 递归方式的数组转链表
      *
      * @param array 数组
+     * @param <T>   a T class
      * @return 链表
      */
     public static <T> SingleLinkedListNode<T> fromArray2(final T[] array) {
@@ -112,6 +131,7 @@ public class SingleLinkedListNode<T> {
      * @param next  下一个节点
      * @param array 数组
      * @param index 当前数组的索引
+     * @param <T>   a T class
      * @return 链表
      */
     private static <T> SingleLinkedListNode<T> _fromArray2(SingleLinkedListNode<T> next, T[] array, int index) {
