@@ -1,38 +1,9 @@
 package cool.scx.learn.computer_theory;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
 /**
  * 模拟基本逻辑门及其组合关系
  */
 public class LogicGate {
-
-    public static void main(String[] args) {
-        test("not", LogicGate::not);
-        test("and", LogicGate::and);
-        test("or", LogicGate::or);
-        test("xor", LogicGate::xor);
-        test("nand", LogicGate::nand);
-        test("nor", LogicGate::nor);
-        test("xnor", LogicGate::xnor);
-    }
-
-    public static void test(String name, BiFunction<Boolean, Boolean, Boolean> fun) {
-        System.out.println("name : " + name);
-        System.out.println("A   B   T");
-        System.out.println("1   1   " + (fun.apply(true, true) ? 1 : 0));
-        System.out.println("0   1   " + (fun.apply(false, true) ? 1 : 0));
-        System.out.println("1   0   " + (fun.apply(true, false) ? 1 : 0));
-        System.out.println("0   0   " + (fun.apply(false, false) ? 1 : 0));
-    }
-
-    public static void test(String name, Function<Boolean, Boolean> fun) {
-        System.out.println("name : " + name);
-        System.out.println("A   T");
-        System.out.println("1   " + (fun.apply(true) ? 1 : 0));
-        System.out.println("0   " + (fun.apply(false) ? 1 : 0));
-    }
 
     /**
      * 非门 (基本)
