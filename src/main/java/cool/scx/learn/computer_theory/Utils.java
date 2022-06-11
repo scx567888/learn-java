@@ -61,6 +61,7 @@ public class Utils {
      * 二进制转 十进制
      *
      * @param bins 二进制数组
+     * @return a int
      */
     public static int binaryToDecimal(int[] bins) {
         return Integer.valueOf(Arrays.stream(bins).mapToObj(String::valueOf).collect(Collectors.joining()), 2);

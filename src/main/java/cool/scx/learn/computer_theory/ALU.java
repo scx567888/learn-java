@@ -118,6 +118,10 @@ public class ALU {
 
     /**
      * 8 位行波进位加法器
+     *
+     * @param a an array of {@link int} objects
+     * @param b an array of {@link int} objects
+     * @return an array of {@link int} objects
      */
     public static int[] _8BitRippleCarryAdder(int[] a, int[] b) {
         var a1 = intToBoolean(a);
