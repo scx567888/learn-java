@@ -50,6 +50,13 @@ public class ALUTest {
             }
         }
 
+        System.out.println("判断是否为 0 (isZero) :");
+        for (int i = 0; i < 256; i++) {
+            var a = decimalToBinary(i);
+            var r = isZero(a);
+            System.out.println(i + " 是否为 0 ? " + (r ? "是" : "否"));
+        }
+
     }
 
     /**
