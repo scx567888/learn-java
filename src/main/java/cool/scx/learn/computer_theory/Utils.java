@@ -1,5 +1,10 @@
 package cool.scx.learn.computer_theory;
 
+import cool.scx.util.StringUtils;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * <p>Utils class.</p>
  *
@@ -38,6 +43,28 @@ public class Utils {
             }
         }
         return booleans;
+    }
+
+    /**
+     * 十进制转 二进制
+     *
+     * @param i 十进制数字
+     * @return 二进制数组
+     */
+    public static int[] decimalToBinary(int i) {
+        var s = Integer.toBinaryString(i);
+        s = StringUtils.repeat("0", 8 - s.length()) + s;
+        return Arrays.stream(s.split("")).mapToInt(Integer::valueOf).toArray();
+    }
+
+    /**
+     * 二进制转 十进制
+     *
+     * @param bins 二进制数组
+     * @return a int
+     */
+    public static int binaryToDecimal(int[] bins) {
+        return Integer.valueOf(Arrays.stream(bins).mapToObj(String::valueOf).collect(Collectors.joining()), 2);
     }
 
 }
