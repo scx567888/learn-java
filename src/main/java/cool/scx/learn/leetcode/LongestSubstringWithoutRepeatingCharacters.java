@@ -1,11 +1,18 @@
 package cool.scx.learn.leetcode;
 
+/**
+ * <p>LongestSubstringWithoutRepeatingCharacters class.</p>
+ *
+ * @author scx567888
+ * @version 1.0.0
+ */
 public class LongestSubstringWithoutRepeatingCharacters {
 
     /**
      * todo
-     * @param s
-     * @return
+     *
+     * @param s a {@link java.lang.String} object
+     * @return a int
      */
     public static int lengthOfLongestSubstring(String s) {
 
