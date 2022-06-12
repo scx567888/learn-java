@@ -77,7 +77,39 @@ public class ALU {
     }
 
     /**
+     * 判断一个数字是否为 0
+     *
+     * @param a 8 位二进制数组
+     * @return 是否为 0
+     */
+    public static boolean isZero(boolean[] a) {
+        if (a.length != 8) {
+            throw new IllegalArgumentException("参数数组数量必须为 8");
+        }
+        var r1 = or(a[0], a[1]);
+        var r2 = or(a[2], a[3]);
+        var r3 = or(a[4], a[5]);
+        var r4 = or(a[6], a[7]);
+        var r5 = or(r1, r2);
+        var r6 = or(r3, r4);
+        var r = or(r5, r6);
+        return not(r);
+    }
+
+    /**
+     * a
+     *
+     * @param a a
+     * @return a
+     */
+    public static boolean isZero(int[] a) {
+        var a1 = intToBoolean(a);
+        return isZero(a1);
+    }
+
+    /**
      * 8 位行波进位加法器
+     * 现代计算机一般不使用此种加法器而是使用 [超前进位加法器] 可以了解一下
      *
      * @param a 8 位二进制数组
      * @param b 8 位二进制数组
