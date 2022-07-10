@@ -1,7 +1,5 @@
 package cool.scx.learn.computer_theory;
 
-import cool.scx.util.StringUtils;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -53,7 +51,7 @@ public class Utils {
      */
     public static int[] decimalToBinary(int i) {
         var s = Integer.toBinaryString(i);
-        s = StringUtils.repeat("0", 8 - s.length()) + s;
+        s = "0".repeat(8 - s.length()) + s;
         return Arrays.stream(s.split("")).mapToInt(Integer::valueOf).toArray();
     }
 
