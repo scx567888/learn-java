@@ -33,7 +33,7 @@
 
     <properties>
         <scx.mainClass>cool.scx.learn-java.Main</scx.mainClass>
-        <scx-ext.version>1.13.0</scx-ext.version>
+        <scx-ext.version>1.13.1</scx-ext.version>
     </properties>
 
 </project>
