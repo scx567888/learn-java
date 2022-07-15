@@ -16,11 +16,16 @@
 
     <dependencies>
 
-        <!-- scx 拓展包 -->
         <dependency>
             <groupId>cool.scx</groupId>
-            <artifactId>scx-ext</artifactId>
-            <version>${scx-ext.version}</version>
+            <artifactId>scx-common</artifactId>
+            <version>0.0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cool.scx</groupId>
+            <artifactId>scx-logging</artifactId>
+            <version>0.0.3</version>
         </dependency>
 
         <dependency>
@@ -30,10 +35,5 @@
         </dependency>
 
     </dependencies>
-
-    <properties>
-        <scx.mainClass>cool.scx.learn-java.Main</scx.mainClass>
-        <scx-ext.version>1.13.1</scx-ext.version>
-    </properties>
 
 </project>
